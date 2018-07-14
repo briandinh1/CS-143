@@ -1,0 +1,40 @@
+WRITE		EXPECTATION
+1 7 		(page data exists, no change)
+1 523788 	(page data exists, no change)
+1 1598464 	(not resident, pf)
+1 3709951 	(new data allocated in new frame, Frame 1000 has 512 for me)
+1 268423268	(page data exists, no change)
+1 268423268	
+1 268423269	
+1 268423781	
+1 267973832 	(new data allocated in new frame, Frame 1022 has 1024 for me)
+
+READ
+0 7 		(data exists, no change)
+0 523788 	(data exists, no change)
+0 1598464 	(not resident, pf)
+0 3709951 	(data exists, no change)
+0 268423268 	(data exists, no change)
+0 268423268	
+0 268423269	
+0 268423781	
+0 267973832 	(data exists, no change)
+0 267873682 	(not allocated, err)
+
+
+SPW TRANSLATION
+7 		s:0	p:0	w:7
+523788 		s:0	p:1023	w:12
+1598464 	s:3	p:50	w:0	
+3709951 	s:7	p:77	w:511
+268423268 	s:511	p:1000	w:100
+268423269	s:511 	p:1000 	w:101
+268423781 	s:511 	p:1001 	w:101
+267973832 	s:511	p:122	w:200
+267873682	s:511	p:122	w:50
+
+OUTPUT NO TLB
+...
+
+OUTPUT YES TLB
+...

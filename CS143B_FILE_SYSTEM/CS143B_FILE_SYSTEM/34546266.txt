@@ -1,0 +1,47 @@
+disk initialized
+foo created
+foo opened 1
+60 bytes written
+10 bytes written
+position is 55
+xxxxxyyyyy
+foo 
+
+
+disk restored
+foo opened 1
+xxx
+error
+1 closed
+foo 
+
+abc created
+abc opened 1
+10 bytes written
+error
+
+position is 0
+aaaaaaaaaa
+position is 10
+10 bytes written
+position is 0
+aaaaaaaaaabbbbbbbbbb
+
+foo opened 2
+position is 0
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyyyyyyyyyy
+
+xxx created
+xxx opened 3
+40 bytes written
+position is 0
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+position is 0
+error
+position is 0
+192 bytes written
+position is 192
+
+3 closedxxx destroyed
+obo created
+error
